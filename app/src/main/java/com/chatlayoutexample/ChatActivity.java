@@ -164,6 +164,8 @@ public class ChatActivity extends AppCompatActivity {
         mBtnIncolla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mIdIntelocutore.setSelectAllOnFocus(true);
+                mIdIntelocutore.requestFocus();
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 mIdIntelocutore.setText( clipboard.getText().toString());
 
